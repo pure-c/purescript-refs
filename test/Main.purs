@@ -24,7 +24,8 @@ main = do
 
   -- modify it by adding 1 to the current state
   Ref.modify_ (\s -> s + 1) ref
+  pure unit
 
-  -- now it is 2 when we read out the value
-  curr3 <- Ref.read ref
-  assertEqual { actual: curr3, expected: 2 }
+  -- -- now it is 2 when we read out the value
+  -- curr3 <- Ref.read ref
+  -- assertEqual { actual: curr3, expected: 2 }
