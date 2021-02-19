@@ -24,6 +24,7 @@ PURS_FFI_FUNC_2(Effect_Ref_new, val, _) {
 PURS_FFI_FUNC_2(Effect_Ref_read, _ref, _) {
 	const purs_foreign_t *foreign = purs_any_unsafe_get_foreign(_ref);
 	purs_any_t any = *((const purs_any_t*) foreign->data);
+	PURS_ANY_RETAIN(any);
 	return any;
 }
 
