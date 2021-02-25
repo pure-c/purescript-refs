@@ -5,7 +5,7 @@ include $(PUREC_DIR)/mk/target.mk
 
 main: .spago
 
-main_CFLAGS = -g
+CFLAGS = -g3 -O0
 
 $(eval $(call purs_mk_target,main,Test.Main,src test))
 
